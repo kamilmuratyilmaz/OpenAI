@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OpenAI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="display: flex; flex-direction: column; align-items:center;">
+    <div style="margin-bottom:50px;">
+        <label for="question">Ask GPT-3:</label>
+        <input type="text" id="question" style="height:30px;">
+    </div>
+    <div>
+        <button onclick="davinciGet()" style="width:150px; height:30px;">Give me the Answer</button>
+    </div>
+    <div>
+        <h1 id="answer">AFS</h1>
+    </div>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="modules/davinci.js"></script>
+</body>
+
+</html>
