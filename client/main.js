@@ -1,3 +1,3 @@
-import { davinciGet } from "./modules/davinci";
+import { davinciGet } from "./modules/davinci.js";
 
-davinciGet();
+document.getElementById("request").addEventListener("click", davinciGet);

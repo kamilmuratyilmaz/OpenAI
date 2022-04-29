@@ -1,22 +1,18 @@
-const axios = require('axios').default;
-const dotenv = require('dotenv');
-
-dotenv.config();
-
-axios.defaults.baseURL = process.env.SERVER_URL;
-
-let question = document.getElementById("question").value;
+axios.defaults.baseURL = "http://localhost:8081";
 
 const davinciGet = async () => {
     try {
-        const res = await axios.post('/api/openAI', question, {
+        var questionData = {
+            question : await document.getElementById("question").value,
+        }
+        let res = await axios.post('/api/openAI',  questionData, {
             headers: {
                 'Content-Type': 'application/json',
-                withCredentials: true
             }
         });
         return res = document.getElementById("answer").innerHTML;
     } catch (err) {
+        console.log(questionData);
         console.error(err);
     }
 };
