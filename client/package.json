@@ -1,6 +1,16 @@
 {
+  "name": "open-client",
+  "version": "2.0.0",
+  "main": "main.js",
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
