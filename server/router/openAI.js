@@ -12,9 +12,9 @@ app.post("/openAI", async (req, res) => {
         });
         const openai = new OpenAIApi(configuration);
         const response = await openai.createCompletion("text-davinci-002", {
-            prompt: JSON.stringify(question),
-            temperature: 0,
-            max_tokens: 1,
+            prompt: question,
+            temperature: 1,
+            max_tokens: 200,
         });
         console.log(question);
         return res.status(200).json(response.data.choices[0].text);
