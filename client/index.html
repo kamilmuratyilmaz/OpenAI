@@ -5,22 +5,42 @@
     <title>OpenAI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body style="display: flex; flex-direction: column; align-items:center;">
-    <div style="margin-bottom:50px;">
+<body>
+    <div class="question-container">
         <label for="question">Ask GPT-3:</label>
-        <input type="text" id="question" style="height:30px;">
+        <input type="text" placeholder="How can I live healthy?" id="question">
     </div>
-    <div>
-        <button id="request" style="width:150px; height:30px;">Give me the Answer</button>
+    <div class="ai-options">
+        <div class="temperature">
+            <label for="temperature">Temperature(0-1):</label>
+            <input type="text" placeholder="0.4" id="temperature"">
+        </div>
+        <div class=" token">
+            <label for="token">Token</label>
+            <input type="text" placeholder="1-4k, recommend 10-20" id="token"">
+        </div>
     </div>
-    <div>
-        <h1 id="answer">AFS</h1>
-    </div>
-    <script src="node_modules/axios/dist/axios.js"></script>
-    <script type="module" src="modules/davinci.js"></script>
-    <script type="module" src="main.js"></script>
+    <div class=" btns">
+            <button id="request">Give me the Answer</button>
+            <button id="reset" onclick="clearStorage()">Reset</button>
+        </div>
+        <div class="answer">
+            <h1 id="answer" style="white-space: pre-wrap;"></h1>
+        </div>
+
+
+        <script src="node_modules/axios/dist/axios.js"></script>
+        <script type="module" src="modules/davinci.js"></script>
+        <script type="module" src="main.js"></script>
+
+        <script>
+            function clearStorage() {
+                localStorage.clear();
+            }
+        </script>
 </body>
 
 </html>

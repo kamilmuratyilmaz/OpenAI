@@ -1,22 +1,34 @@
 axios.defaults.baseURL = "http://localhost:8081";
 
-const davinciGet = async () => {
+export const davinciGet = async () => {
     try {
         var questionData = {
-            question : await document.getElementById("question").value,
+            question: await document.getElementById("question").value,
+            temperature: await Number(document.getElementById("temperature").value),
+            token: await Number(document.getElementById("token").value),
         }
-        let res = await axios.post('/api/openAI',  questionData, {
+        const res = await axios.post('/api/openAI', questionData, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        return res = document.getElementById("answer").innerHTML;
+        Object.entries(questionData).forEach(([key, value]) => setStorage(key, value));
+        localStorage.setItem('answer', res.data);
+        document.getElementById("answer").innerHTML = res.data;
     } catch (err) {
-        console.log(questionData);
+        alert(err);
+        alert("Eksik input olabilir");
         console.error(err);
     }
 };
 
-export {
-    davinciGet
+
+const setStorage = (dataKey, item) => {
+    localStorage.setItem(dataKey, item);
+};
+
+export let questionData = {
+    question: await document.getElementById("question").value,
+    temperature: await Number(document.getElementById("temperature").value),
+    token: await Number(document.getElementById("token").value),
 }
