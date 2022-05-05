@@ -16,6 +16,6 @@ app.use("/api", openAI);
 
 dotenv.config();
 
-app.listen(process.env.PORT, (err) => {
+app.listen(process.env.PORT || 8080, (err) => {
     err ? console.log(err) : console.log(process.env.PORT + " listening ...");
 })
