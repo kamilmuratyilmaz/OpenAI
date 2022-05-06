@@ -6,10 +6,10 @@
 
 ---
 ### Technologies
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript"><img src="https://github.com/get-icon/geticon/raw/master/icons/javascript.svg" alt="JavaScript" width="19px" height="15px"></a> JavaScript 
-- <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs.svg" alt="Vue.js" width="19px" height="15px"></a> Node.js 
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript"><img src="https://github.com/get-icon/geticon/raw/master/icons/javascript.svg" alt="JavaScript" width="19px" height="15px"> JavaScript</a>
+- <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs.svg" alt="Vue.js" width="19px" height="15px"> Node.js</a>
 
-- <a href="https://openai.com/" title="OpenAI"> <img src="https://cdn.iconscout.com/icon/free/png-256/openai-1524384-1290687.png" alt="OpenAI" width="19px" height="15px"> </a> OpenAI
+- <a href="https://openai.com/" title="OpenAI"> <img src="https://cdn.iconscout.com/icon/free/png-256/openai-1524384-1290687.png" alt="OpenAI" width="19px" height="15px"> OpenAI</a>
 
 ---
 ### Libraries
