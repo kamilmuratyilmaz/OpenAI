@@ -19,8 +19,11 @@ export const davinciGet = async () => {
         localStorage.setItem('answer', res.data);
         document.getElementById("answer").innerHTML = res.data;
     } catch (err) {
-        alert(err.response.data);
-        console.error(err);
+        if (!(err.response.data === undefined)) {
+            alert(err.response.data);
+            console.error(err);
+        }
+        else alert(err + "; Check server connection");
     }
 };
 

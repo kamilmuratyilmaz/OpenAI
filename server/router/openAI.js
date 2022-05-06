@@ -17,7 +17,7 @@ app.post("/openAI", async (req, res) => {
                     return "Invalid or missing temperature "
                 break;
             case "token":
-                if (!(value > 0 && value <= 2800))
+                if (!(value > 0 && value <= 4000))
                     return "Invalid or missing token "
                 break;
         }
